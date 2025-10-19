@@ -6,6 +6,9 @@ import Toggle from './components/Toggle.vue'
 import { ref } from 'vue'
 
 const isDefaultLayout = ref(true)
+function handleToggle(value: boolean) {
+  isDefaultLayout.value = value
+}
 </script>
 
 <template>
@@ -22,10 +25,11 @@ const isDefaultLayout = ref(true)
   </header>
 
   <main v-if="isDefaultLayout">
-    <Toggle :bool="isDefaultLayout" />
+    <Toggle :bool="isDefaultLayout" v-on:update="handleToggle" />
     <TheWelcome />
   </main>
   <main v-else>
+    <Toggle :bool="isDefaultLayout" v-on:update="handleToggle" />
     <p>This is an alternative layout.</p>
   </main>
 </template>
