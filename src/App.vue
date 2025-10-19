@@ -3,23 +3,30 @@ import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Sidebar from './components/Sidebar.vue'
 import Toggle from './components/Toggle.vue'
+import { ref } from 'vue'
+
+const isDefaultLayout = ref(true)
 </script>
 
 <template>
   <div class="sidebar">
-    <Toggle />
+    <Toggle :bool="false" />
     <Sidebar />
   </div>
 
-  <header>
+  <header v-if="isDefaultLayout">
     <div class="wrapper">
       <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
       <HelloWorld msg="You did it!" />
     </div>
   </header>
 
-  <main>
+  <main v-if="isDefaultLayout">
+    <Toggle :bool="isDefaultLayout" />
     <TheWelcome />
+  </main>
+  <main v-else>
+    <p>This is an alternative layout.</p>
   </main>
 </template>
 

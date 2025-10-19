@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const isToggled = ref(false)
+const props = defineProps<{
+  bool: boolean
+}>()
+
+const { bool } = props
+
+const isToggled = ref(bool)
 </script>
 <template>
   <button @click="isToggled = !isToggled">
