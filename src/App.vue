@@ -4,6 +4,7 @@ import TheWelcome from './components/TheWelcome.vue'
 import Sidebar from './components/Sidebar.vue'
 import Toggle from './components/Toggle.vue'
 import { ref } from 'vue'
+import Alternative from './components/Alternative.vue'
 
 const isDefaultLayout = ref(true)
 function handleToggle(value: boolean) {
@@ -30,7 +31,7 @@ function handleToggle(value: boolean) {
   </main>
   <main v-else>
     <Toggle :bool="isDefaultLayout" v-on:update="handleToggle" />
-    <p>This is an alternative layout.</p>
+    <Alternative />
   </main>
 </template>
 
