@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Sidebar from './Sidebar.vue'
+
 defineProps<{
   msg: string
 }>()
