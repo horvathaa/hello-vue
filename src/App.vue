@@ -2,14 +2,18 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Sidebar from './components/Sidebar.vue'
+import Toggle from './components/Toggle.vue'
 </script>
 
 <template>
-  <Sidebar />
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="sidebar">
+    <Toggle />
+    <Sidebar />
+  </div>
 
+  <header>
     <div class="wrapper">
+      <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
       <HelloWorld msg="You did it!" />
     </div>
   </header>
@@ -22,6 +26,13 @@ import Sidebar from './components/Sidebar.vue'
 <style scoped>
 header {
   line-height: 1.5;
+}
+
+.sidebar {
+  margin-bottom: 2rem;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
 }
 
 .logo {
@@ -42,8 +53,10 @@ header {
 
   header .wrapper {
     display: flex;
+    flex-direction: column;
     place-items: flex-start;
     flex-wrap: wrap;
+    margin: 1rem;
   }
 }
 </style>

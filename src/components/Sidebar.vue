@@ -4,19 +4,19 @@ export default {
 }
 </script>
 <template>
-  <!-- <aside class="sidebar"> -->
-  <nav class="sidebar">
-    <ul>
-      <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#getting-started">Getting Started</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#installation">Installation</a></li>
-      <li><a href="#usage">Usage</a></li>
-      <li><a href="#contributing">Contributing</a></li>
-      <li><a href="#license">License</a></li>
-    </ul>
-  </nav>
-  <!-- </aside> -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#contributing">Contributing</a></li>
+        <li><a href="#license">License</a></li>
+      </ul>
+    </nav>
+  </aside>
 </template>
 <style scoped>
 .sidebar {
